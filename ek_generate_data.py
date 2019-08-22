@@ -7,7 +7,7 @@ def write_data(filename,data,mod='w'):
     with open(filename,mod) as fp:
         if type(data) == type(list()):
             for idx,da in enumerate(data):
-                fp.write(f'{{"index": {{"_index": "my_index", "_id":{idx}}}}}')
+                fp.write(f'{{"index": {{"_index": "uuid_index", "_id":{idx}}}}}')
                 fp.write("\n"+da+"\n")
 
 np.random.seed(int(time.time()))
